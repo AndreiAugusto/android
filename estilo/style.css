@@ -33,13 +33,14 @@ header h1 {
   font-family: var(--fonte-destaque);
   margin-bottom: 20px;
   font-size: 3em;
+  font-weight: normal;
   text-shadow: 3px 3px 4px #0000004d;
 }
 header p {
   font-family: var(--fonte-padrao);
   font-size: 1.2em;
   text-align: center;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px;
   max-width: 500px;
   margin: auto;
   text-shadow: 3px 3px 4px #0000004d;
@@ -84,72 +85,105 @@ main h2 {
   margin: 0px 10px;
 }
 main h2 {
-  background-image: linear-gradient(to right, #83e1ad67, #83e1ad00);
+  background-image: linear-gradient(to right, #83e1ad67, transparent);
+  text-indent: 10px;
 }
 main a {
-  color: #1a5c37;
+  background-color: var(--cor0);
+  color: var(--cor3);
   font-weight: bold;
+  border-radius: 10px;
+  padding: 2px 6px;
+}
+main a:hover {
+  text-decoration: underline;
+  background-color: var(--cor1);
+}
+main p {
+  margin: 15px 0px;
+  text-align: justify;
+  text-indent: 30px;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+main strong {
+  color: var(--cor3);
+  font-weight: bold;
+  padding: 2px 6px;
 }
 
 aside {
   min-width: 300px;
-  max-width: 750px;
+  max-width: 790px;
   background-color: var(--cor0);
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px #00000054;
 }
 aside h3 {
   background-color: var(--cor3);
   color: white;
   border-radius: 10px 10px 0px 0px;
-  padding: 5px;
+  padding: 7px;
 }
 aside p {
   padding: 10px;
 }
 aside ul {
+  list-style-type: '\2714\00A0\00a0';
   columns: 2;
-  padding-left: 50px;
+  list-style-position: inside;
+  margin-left: 30px;
 }
 
 footer {
   background-color: var(--cor3);
   color: white;
-}
-footer p {
   text-align: center;
   padding: 5px;
 }
 footer a {
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 img {
+  width: 100%;
   display: block;
   margin: auto;
 }
 img.pequena {
-  width: 45%;
-}
-
-p {
-  text-align: justify;
+  max-width: 350px;
 }
 
 a {
   text-decoration: none;
 }
+a.externo:after {
+  content: '\1F517';
+}
 
-.video {
+section.video {
   background-color: var(--cor3);
   padding: 10px;
+  margin: 30px -20px 30px -20px;
+  padding-bottom: 58%;
+  position: relative;
+}
+section.video > iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
 }
 
 iframe.center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
